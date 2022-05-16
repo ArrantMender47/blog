@@ -79,9 +79,6 @@
 				<el-form-item v-if="radio!==2">
 					<el-row>
 						<el-col :span="6">
-							<el-switch v-model="form.appreciation" active-text="赞赏"></el-switch>
-						</el-col>
-						<el-col :span="6">
 							<el-switch v-model="form.recommend" active-text="推荐"></el-switch>
 						</el-col>
 						<el-col :span="6">
@@ -125,7 +122,6 @@
 					words: null,
 					readTime: null,
 					views: 0,
-					appreciation: false,
 					recommend: false,
 					commentEnabled: false,
 					top: false,
@@ -180,7 +176,6 @@
 				this.$refs.formRef.validate(valid => {
 					if (valid) {
 						if (this.radio === 2) {
-							this.form.appreciation = false
 							this.form.recommend = false
 							this.form.commentEnabled = false
 							this.form.top = false

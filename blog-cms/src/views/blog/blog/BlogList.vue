@@ -72,9 +72,6 @@
 				<el-form-item v-if="radio!==2">
 					<el-row>
 						<el-col :span="6">
-							<el-switch v-model="visForm.appreciation" active-text="赞赏"></el-switch>
-						</el-col>
-						<el-col :span="6">
 							<el-switch v-model="visForm.recommend" active-text="推荐"></el-switch>
 						</el-col>
 						<el-col :span="6">
@@ -117,7 +114,6 @@
 				blogId: 0,
 				radio: 1,
 				visForm: {
-					appreciation: false,
 					recommend: false,
 					commentEnabled: false,
 					top: false,
@@ -157,7 +153,6 @@
 			//编辑博客可见性
 			editBlogVisibility(row) {
 				this.visForm = {
-					appreciation: row.appreciation,
 					recommend: row.recommend,
 					commentEnabled: row.commentEnabled,
 					top: row.top,
@@ -174,7 +169,6 @@
 					return this.msgError("密码保护模式必须填写密码！")
 				}
 				if (this.radio === 2) {
-					this.visForm.appreciation = false
 					this.visForm.recommend = false
 					this.visForm.commentEnabled = false
 					this.visForm.top = false

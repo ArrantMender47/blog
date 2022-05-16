@@ -1,18 +1,19 @@
 <template>
 	<header ref="header">
 		<div class="view">
-			<img ref="imgbg1" src="https://cdn.jsdelivr.net/gh/ArrantMender47/blog-resource/img/bg1.jpg" style="display: none;">
-			<div class="bg1" style="background-image: url('https://cdn.jsdelivr.net/gh/ArrantMender47/blog-resource/img/bg1.jpg');"></div>
-			<div class="bg2" style="background-image: url('https://cdn.jsdelivr.net/gh/ArrantMender47/blog-resource/img/bg3.jpg');"></div>
-			<div class="bg3" style="background-image: url('https://cdn.jsdelivr.net/gh/ArrantMender47/blog-resource/img/bg2.jpg');" v-show="loaded"></div>
+			<img ref="imgbg1" src="https://cdn.jsdelivr.net/gh/ArrantMender47/blog-resource@master/img/bg6.jpg" style="display: none;">
+			<div class="bg1" style="background-image: url('https://cdn.jsdelivr.net/gh/ArrantMender47/blog-resource@master/img/bg10.jpg');"></div>
+			<div class="bg2" style="background-image: url('https://cdn.jsdelivr.net/gh/ArrantMender47/blog-resource@master/img/bg11.jpg');"></div>
 		</div>
 		<div class="text-malfunction" data-word="Ar's Blog">
 		</div>
 		<div class="wrapper">
 			<i class="ali-iconfont icon-down" @click="scrollToMain"></i>
 		</div>
-		<div class="wave1"></div>
-		<div class="wave2"></div>
+    <div>
+    </div>
+<!--		<div class="wave1"></div>
+		<div class="wave2"></div>-->
 	</header>
 </template>
 
@@ -106,10 +107,10 @@
 		z-index: 20;
 		opacity: calc(1 - (var(--percentage) - 0.25) / 0.25);
 	}
-
+/*
 	.view .bg3 {
 		left: -10%;
-	}
+	}*/
 
 	header .view,
 	header .bg1,
@@ -138,27 +139,19 @@
 		content: attr(data-word);
 		position: absolute;
 		top: 0;
-		height: 40px;
-		overflow: hidden;
+		height: 100px;
+		overflow: inherit;
 		filter: contrast(200%);
 	}
 
 	.text-malfunction:before {
 		left: 0;
-		color: red;
-		text-shadow: 1px 0 0 red;
+		color: #f6f4f4;
+		text-shadow: 0 0 0 #f6f4f4;
 		z-index: 30;
-		animation: malfunctionAni 0.95s infinite;
 	}
 
-	.text-malfunction:after {
-		left: -1px;
-		color: cyan;
-		text-shadow: -1px 0 0 cyan;
-		z-index: 40;
-		mix-blend-mode: lighten;
-		animation: malfunctionAni 1.1s infinite 0.2s;
-	}
+
 
 	@keyframes lineMove {
 		9% {

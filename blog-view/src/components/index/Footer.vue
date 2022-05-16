@@ -27,13 +27,13 @@
 
 			<div class="ui inverted section divider"></div>
 
-			<p class="m-text-thin m-text-spaced m-opacity-tiny">
+<!--			<p class="m-text-thin m-text-spaced m-opacity-tiny">
 				<span style="margin-right: 10px" v-if="siteInfo.copyright">{{ siteInfo.copyright.title }}</span>
 				<router-link to="/" style="color:#ffe500" v-if="siteInfo.copyright">{{ siteInfo.copyright.siteName }}</router-link>
 				<span style="margin: 0 15px" v-if="siteInfo.copyright && siteInfo.beian">|</span>
 				<img src="/img/beian.png" alt="" class="beian" v-if="siteInfo.beian">
 				<a rel="external nofollow noopener" href="http://www.beian.miit.gov.cn/" target="_blank" style="color:#ffe500">{{ siteInfo.beian }}</a>
-			</p>
+			</p>-->
 
 			<div class="github-badge" v-for="(item,index) in badges" :key="index">
 				<a rel="external nofollow noopener" :href="item.url" target="_blank" :title="item.title">
